@@ -1,0 +1,81 @@
+/*
+ * @Author: joanoor
+ * @Mail: joanoor@outlook.com
+ * @Github: https://github.com/joanoor
+ * 小程序的wxs文件，只支持ES5的语法
+ */
+
+module.exports = {
+
+  /**
+   * 官方自定义下拉刷新
+   * @param {any} evt
+   * @param {any} instance
+   */
+  onPulling: function (evt, instance) {
+    var p = Math.min(evt.detail.dy / 80, 1)
+    var view = instance.selecxComponent('.refresh-container')
+    view.setStyle({
+      opacity: p,
+      transform: "scale(" + p + ")"
+    })
+  },
+
+  /**
+   * 四舍五入数字
+   * @date 2020-07-08
+   * @param { Number } value
+   * @returns { Number }
+   */
+  roundNumber: function (value) {
+    return Math.round(value)
+  },
+
+  /**
+   * 将姓名长度大于2的转换成2位名字，否则不转换
+   * @date 2020-07-08
+   * @param { String } name
+   * @returns { String }
+   */
+  roundName: function (name) {
+    var b = ''
+    if (name.length > 2) {
+      b = name.slice(-2)
+    } else {
+      b = name
+    }
+    return b
+  },
+
+  /**
+   * 转成整数
+   * @date 2020-07-09
+   * @param { Number,String } value
+   * @returns { Number }
+   */
+  intParse: function (value) {
+    return parseInt(value)
+  },
+
+  /**
+   * 转成浮点数
+   * @date 2020-07-09
+   * @param { Number,String } value
+   * @returns { Number }
+   */
+  floatParse: function (value) {
+    return parseFloat(value)
+  },
+
+  /**
+   * 固定两位小数
+   * @date 2020-07-09
+   * @param { Number } value
+   * @returns { Number }
+   */
+  fixedNum: function (value) {
+    return parseFloat(value).toFixed(2);
+  },
+
+
+}

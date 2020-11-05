@@ -1,0 +1,27 @@
+{
+  "name": "summer",
+  "version": "1.0.0",
+  "description": "a miniprogram structure\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D \u001b[Dnative \u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~miniprogram structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joanor/summer.git"
+  },
+  "keywords": [
+    "miniprogram"
+  ],
+  "author": "joanoor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joanor/summer/issues"
+  },
+  "homepage": "https://github.com/joanor/summer#readme",
+  "dependencies": {
+    "miniprogram-computed": "^2.1.1",
+    "mobx-miniprogram": "^4.13.2",
+    "mobx-miniprogram-bindings": "^1.2.1"
+  }
+}
