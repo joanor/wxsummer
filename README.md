@@ -1,5 +1,5 @@
-# summer
-一个小程序Component框架，封装了混入、存储、地图、安全、时间、事件和一些常用的方法；
+# wxsummer
+一个小程序Component框架，通过引入另一个包wxsharp封装了混入、存储、地图、安全、时间、事件和一些常用的方法；
 
 封装Component，全局混入
 * $http
@@ -25,7 +25,8 @@
 * $dispatch
   * 发布事件
 
-内置了加密、map、mobx……  
+内置了加密、map、~~mobx……~~  
+工具集UTILS
 
 使用：  
 ```npm run build```

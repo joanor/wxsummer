@@ -1,9 +1,9 @@
 {
-  "name": "minisummer",
-  "version": "1.1.1",
+  "name": "wxsummer",
+  "version": "2.0.2",
   "description": "一个小程序Component框架，封装了混入、存储、地图、安全、时间、事件和一些常用的方法",
   "miniprogram": "dist",
-  "main":"dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js"
@@ -18,7 +18,6 @@
   "keywords": [
     "miniprogram"
   ],
-
   "author": "joanoor",
   "license": "ISC",
   "bugs": {
@@ -29,7 +28,7 @@
     "miniprogram-computed": "^2.1.1",
     "mobx-miniprogram": "^4.13.2",
     "mobx-miniprogram-bindings": "^1.2.1",
-    "thread-loader": "^3.0.1"
+    "wxsharp": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

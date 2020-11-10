@@ -1,7 +1,4 @@
-import { basic } from './mixins/base'
-import { storeBindingsBehavior } from 'mobx-miniprogram-bindings'
-import { store } from './store/index'
-
+import basic from 'wxsharp'
 const computedBehavior = require('miniprogram-computed')
 
 const relationFunctions = {
@@ -63,7 +60,7 @@ function makeRelation (options, xtOpitions, relation) {
   });
 }
 
-function xt (xtOpitions) {
+module.exports = function (xtOpitions) {
   const options = {};
   mapKeys(xtOpitions, options, {
     data: 'data',
@@ -87,13 +84,13 @@ function xt (xtOpitions) {
   }
 
   // add default store, each page will use it
-  options.storeBindings = {
-    store,
-    fields: {
-      username: () => store.username
-    },
-    actions: ['update']
-  }
+  // options.storeBindings = {
+  //   store,
+  //   fields: {
+  //     // username: () => store.username
+  //   },
+  //   // actions: ['update']
+  // }
 
   // add default externalClasses
   options.externalClasses = options.externalClasses || [];
@@ -102,7 +99,7 @@ function xt (xtOpitions) {
   // add default behaviors
   options.behaviors = options.behaviors || [];
   options.behaviors.push(basic);
-  options.behaviors.push(storeBindingsBehavior);
+  // options.behaviors.push(storebehavior);
   options.behaviors.push(computedBehavior);
 
   // map field to form-field behavior
@@ -127,6 +124,3 @@ function xt (xtOpitions) {
 
   Component(options);
 }
-
-module.exports = xt
-
